@@ -1,0 +1,173 @@
+
+body {
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+.home-page {
+  text-align: center;
+}
+
+.home-page h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.home-buttons button:hover {
+  background-color: #45a049;
+}
+
+.space {
+  margin-bottom: 10px;
+}
+
+.add-list-page {
+  text-align: center;
+}
+
+.add-list-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-list-page input,
+.add-list-page select,
+.add-list-page button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-list-page button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.add-list-page button:hover {
+  background-color: #45a049;
+}
+
+
+.Showlistpage {
+  text-align: center;
+}
+
+.Showlistpage h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.todo-item {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item button {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #45a049;
+}
+
+
+.todo-item span[style*="line-through"] {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+.edit-todo-form {
+  text-align: center;
+}
+
+.edit-todo-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-todo-form input,
+.edit-todo-form select,
+.edit-todo-form button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.edit-todo-form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-todo-form button:hover {
+  background-color: #45a049;
+}
+
+.edit-todo-form button[type="button"] {
+  background-color: #f44336;
+}
+
+.edit-todo-form button[type="button"]:hover {
+  background-color: #e53935;
+}
+
