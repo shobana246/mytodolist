@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/add-list -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React App</title>
+    <!-- You can include any other meta tags or external libraries here -->
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <link href="./React App_files/css2" rel="stylesheet">
+    <!-- If you have any global CSS, you can link it here -->
+  <script defer="" src="./React App_files/bundle.js"></script><style>
+body {
+  background-image: url(http://localhost:3000/static/media/image.50eb8442f49e5024e94c.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position:sticky;
+  
+}
+
+
+.home-page {
+  text-align: center;
+}
+
+.home-page h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.home-buttons button:hover {
+  background-color: #45a049;
+}
+
+.space {
+  margin-bottom: 10px;
+}
+
+.add-list-page {
+  text-align: center;
+}
+
+.add-list-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-list-page input,
+.add-list-page select,
+.add-list-page button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-list-page button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.add-list-page button:hover {
+  background-color: #45a049;
+}
+
+
+.Showlistpage {
+  text-align: center;
+  
+}
+
+.Showlistpage h1 {
+  font-size: 2rem;
+  color: #333;
+  
+}
+
+.todo-item {
+  background-color: #f0ecec;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item button {
+  padding: 5px 10px;
+  margin: initial;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item button[disabled]{
+  background-color: #d3d3d3;
+  color: #e28a8a;
+  cursor: not-allowed; 
+  opacity: 0.6;
+  text-decoration:line-through;
+
+}
+
+
+.todo-item button:hover {
+  background-color: #45a049;
+}
+
+
+.todo-item span[style*="line-through"] {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+.edit-todo-form {
+  text-align: center;
+}
+
+.edit-todo-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-todo-form input,
+.edit-todo-form select,
+.edit-todo-form button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.edit-todo-form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-todo-form button:hover {
+  background-color: #45a049;
+}
+
+.edit-todo-form button[type="button"] {
+  background-color: #f44336;
+}
+
+.edit-todo-form button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLHlEQUFrQztFQUNsQyxzQkFBc0I7RUFDdEIsMkJBQTJCO0VBQzNCLDhCQUE4QjtFQUM5QixTQUFTO0VBQ1QsVUFBVTtFQUNWLGFBQWE7RUFDYixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjs7QUFFckI7O0FBRUE7RUFDRSwwQ0FBMEM7RUFDMUMsbUJBQW1CO0VBQ25CLGFBQWE7RUFDYixXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLHdDQUF3QztFQUN4QyxlQUFlOztBQUVqQjs7O0FBR0E7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0FBQ3JCOztBQUVBOzs7RUFHRSxhQUFhO0VBQ2IsY0FBYztFQUNkLFVBQVU7RUFDVixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixZQUFZO0VBQ1osZUFBZTtBQUNqQjs7QUFFQTtFQUNFLHlCQUF5QjtBQUMzQjs7O0FBR0E7RUFDRSxrQkFBa0I7O0FBRXBCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLFdBQVc7O0FBRWI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsYUFBYTtFQUNiLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsd0NBQXdDO0VBQ3hDLGFBQWE7RUFDYiw4QkFBOEI7RUFDOUIsbUJBQW1COztBQUVyQjs7O0FBR0E7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIsWUFBWTtFQUNaLDRCQUE0Qjs7QUFFOUI7OztBQUdBO0VBQ0UseUJBQXlCO0FBQzNCOzs7QUFHQTtFQUNFLDZCQUE2QjtFQUM3QixXQUFXO0FBQ2I7OztBQUdBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixtQkFBbUI7QUFDckI7O0FBRUE7OztFQUdFLGFBQWE7RUFDYixjQUFjO0VBQ2QsVUFBVTtFQUNWLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCIiwic291cmNlc0NvbnRlbnQiOlsiXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdpbWFnZS5qcGcnKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xuICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIFxufVxuXG4uQXBwIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBwYWRkaW5nOiAyMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiA2MDBweDtcbiAgYm94LXNoYWRvdzogMCA0cHggOHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgcG9zaXRpb246c3RpY2t5O1xuICBcbn1cblxuXG4uaG9tZS1wYWdlIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uaG9tZS1wYWdlIGgxIHtcbiAgZm9udC1zaXplOiAycmVtO1xuICBjb2xvcjogIzMzMztcbn1cblxuLmhvbWUtYnV0dG9ucyB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5ob21lLWJ1dHRvbnMgYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzRDQUY1MDtcbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAxMHB4IDIwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBtYXJnaW46IDVweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uaG9tZS1idXR0b25zIGJ1dHRvbjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0NWEwNDk7XG59XG5cbi5zcGFjZSB7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5hZGQtbGlzdC1wYWdlIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uYWRkLWxpc3QtcGFnZSBmb3JtIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmFkZC1saXN0LXBhZ2UgaW5wdXQsXG4uYWRkLWxpc3QtcGFnZSBzZWxlY3QsXG4uYWRkLWxpc3QtcGFnZSBidXR0b24ge1xuICBwYWRkaW5nOiAxMHB4O1xuICBtYXJnaW46IDEwcHggMDtcbiAgd2lkdGg6IDgwJTtcbiAgbWF4LXdpZHRoOiA0MDBweDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xufVxuXG4uYWRkLWxpc3QtcGFnZSBidXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNENBRjUwO1xuICBjb2xvcjogd2hpdGU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmFkZC1saXN0LXBhZ2UgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQ1YTA0OTtcbn1cblxuXG4uU2hvd2xpc3RwYWdlIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBcbn1cblxuLlNob3dsaXN0cGFnZSBoMSB7XG4gIGZvbnQtc2l6ZTogMnJlbTtcbiAgY29sb3I6ICMzMzM7XG4gIFxufVxuXG4udG9kby1pdGVtIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YwZWNlYztcbiAgcGFkZGluZzogMjBweDtcbiAgbWFyZ2luOiAyMHB4O1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgXG59XG5cblxuLnRvZG8taXRlbSBpbnB1dFt0eXBlPVwiY2hlY2tib3hcIl0ge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbi50b2RvLWl0ZW0gYnV0dG9uIHtcbiAgcGFkZGluZzogNXB4IDEwcHg7XG4gIG1hcmdpbjogaW5pdGlhbDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNENBRjUwO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4udG9kby1pdGVtIGJ1dHRvbltkaXNhYmxlZF17XG4gIGJhY2tncm91bmQtY29sb3I6ICNkM2QzZDM7XG4gIGNvbG9yOiAjZTI4YThhO1xuICBjdXJzb3I6IG5vdC1hbGxvd2VkOyBcbiAgb3BhY2l0eTogMC42O1xuICB0ZXh0LWRlY29yYXRpb246bGluZS10aHJvdWdoO1xuXG59XG5cblxuLnRvZG8taXRlbSBidXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDVhMDQ5O1xufVxuXG5cbi50b2RvLWl0ZW0gc3BhbltzdHlsZSo9XCJsaW5lLXRocm91Z2hcIl0ge1xuICB0ZXh0LWRlY29yYXRpb246IGxpbmUtdGhyb3VnaDtcbiAgY29sb3I6IGdyYXk7XG59XG5cblxuLmVkaXQtdG9kby1mb3JtIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uZWRpdC10b2RvLWZvcm0gZm9ybSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5lZGl0LXRvZG8tZm9ybSBpbnB1dCxcbi5lZGl0LXRvZG8tZm9ybSBzZWxlY3QsXG4uZWRpdC10b2RvLWZvcm0gYnV0dG9uIHtcbiAgcGFkZGluZzogMTBweDtcbiAgbWFyZ2luOiAxMHB4IDA7XG4gIHdpZHRoOiA4MCU7XG4gIG1heC13aWR0aDogNDUwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbn1cblxuLmVkaXQtdG9kby1mb3JtIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0Q0FGNTA7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uZWRpdC10b2RvLWZvcm0gYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQ1YTA0OTtcbn1cblxuLmVkaXQtdG9kby1mb3JtIGJ1dHRvblt0eXBlPVwiYnV0dG9uXCJdIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y0NDMzNjtcbn1cblxuLmVkaXQtdG9kby1mb3JtIGJ1dHRvblt0eXBlPVwiYnV0dG9uXCJdOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2U1MzkzNTtcbn1cblxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <!-- This is where React will mount the app -->
+    <div id="root"><div class="App"><div class="add-list-page"><h1>Add Your Task</h1><form><input placeholder="Enter task name" type="text" value="sxdfgtr"><select><option value="">Select group</option><option value="Work">Work</option><option value="Personal">Personal</option><option value="General">General</option></select><input type="date" value="2025-03-29"><button type="submit">Add Task</button></form></div></div></div>
+
+    <!-- The rest of your JavaScript will be injected here by React and Webpack -->
+  
+
+</body></html>

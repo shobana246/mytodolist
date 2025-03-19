@@ -4,6 +4,8 @@ import { ShowListPage } from "./components/ShowListPage";
 import { AddListPage } from "./components/AddListPage";
 import { HomePage } from "./components/HomePage";
 import { EditTodoForm } from "./components/EditTodoForm"; 
+
+
 import './App.css';
 
 function App() {
@@ -20,52 +22,69 @@ function App() {
   
 
  
-  const onDeleteTask = (id) => {
-    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
-  };
+  // const onDeleteTask = (id) => {
+  //   setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+  // };
 
+
+ 
 
   
-  const addTask = (task, group, date) => {
-    console.log("tasks",task);
-    const newTask = {
-      id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
-      task,
-      group,
-      date,
-      completed: false,
-    };
-    setTasks([...tasks, newTask]);
-    console.log("add Task",newTask.id);
+  const addTask = async (task, group, date) => {
+    try {
+      const response = await fetch("http://localhost:8080/tasks", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", 
+        },
+        body: JSON.stringify({
+          task: task, 
+          group: group, 
+          date: date,
+        }),
+      });
+  
+      if (response.ok) {
+        const newTask = await response.json();
+        console.log("Task added:", newTask);
+        
+      } else {
+        throw new Error("Failed to add task");
+      }
+    } catch (error) {
+      console.error("Error adding task:", error);
+    }
   };
   
 
   
   const updateTask = (updatedTask, group, date, id) => {
-    console.log("UpdateTask",updatedTask, group, date, id)
+    console.log("updated",updatedTask, group, date, id)
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === id ? { ...task, task: updatedTask, group: group, date:date } : task
       )
     );
   };
-  // console.log("updated task");
 
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" 
+          element={<HomePage />} />
 
           <Route
-            path="/add-list"element={<AddListPage addTask={addTask} />}
+            path="/add-list"
+            element={<AddListPage addTask={addTask} />}
           />
           <Route
-            path="/show-list"element={
+            path="/show-list"
+            element={
               <ShowListPage
                 tasks={tasks}
                 onToggleCompleted={onToggleCompleted}
-                onDeleteTask={onDeleteTask}
+                // onDeleteTask={handleDeleteTask}
               />
             }
           />

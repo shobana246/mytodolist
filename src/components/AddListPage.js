@@ -1,22 +1,31 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-export const AddListPage = ({ addTask }) => {
+export const AddListPage = ({ addTask}) => {
   const [task, setTask] = useState("");
   const [group, setGroup] = useState("");
   const [date, setDate] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (task && group && date) {
-      addTask(task, group, date);
-      navigate("/show-list"); 
+      try {
+        await axios.post("http://localhost:8080/tasks", {
+          task,
+          group,
+          date,
+        });
+        navigate("/show-list");
+      } catch (error) {
+        console.error("Error adding task:", error);
+        alert("Failed to add task. Please try again.");
+      }
     } else {
       alert("Please fill all fields.");
     }
   };
- 
 
   return (
     <div className="add-list-page">

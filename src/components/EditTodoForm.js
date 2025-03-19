@@ -7,29 +7,65 @@ export const EditTodoForm = ({ tasks, updateTask }) => {
   const [taskName, setTaskName] = useState("");
   const [group, setGroup] = useState("");
   const [date, setDate] = useState("");
+  const [loading, setLoading]= useState(true);
+ 
+
 
   
   useEffect(() => {
-    const taskToEdit = tasks.find((task) => task.id === parseInt(id)); 
-    if (taskToEdit) {
-      setTaskName(taskToEdit.task);
-      setGroup(taskToEdit.group);
-      setDate(taskToEdit.date);
-    }
-  }, [id, tasks]);
-
+    const fetchTask = async () => {
+      try {
+        const response = await fetch(`http://localhost:8080/tasks/${id}`);
+        const task = await response.json();
+        if (task) {
+          setTaskName(task.task); 
+          setGroup(task.group); 
+          setDate(task.date); 
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching task:", error);
+        setLoading(false);
+      }
+    };
+    fetchTask();
+  }, [id]);
+ 
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (taskName && group && date) {
-      console.log("handleSubmit",taskName, group,date)
-      updateTask(taskName, group, date, parseInt(id)); 
-      navigate("/show-list"); 
-    } else {
-      alert("Please fill in all fields.");
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (taskName && group && date) {
+    try {
+      const updatedTask = { task: taskName, group, date };
+
+      const response = await fetch(`http://localhost:8080/tasks/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedTask),
+      });
+
+      if (response.ok) {
+        const updatedData = await response.json();
+        updateTask(updatedData.task, updatedData.group, updatedData.date, updatedData.id);
+        navigate('/show-list');
+      } else {
+        alert('Failed to update task');
+      }
+    } catch (error) {
+      console.error('Error updating task:', error);
+      alert('Error updating task');
     }
-  };
-   
+  } else {
+    alert("Please fill in all fields.");
+  }
+};
+
+
+  if (loading) {
+    return <div>Loading task data...</div>; 
+  }
    
   return (
     <div className="edit-todo-form">

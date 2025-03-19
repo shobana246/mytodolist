@@ -17,9 +17,10 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position:sticky;
   
 }
 
@@ -89,23 +90,27 @@ body {
 
 .Showlistpage {
   text-align: center;
+  
 }
 
 .Showlistpage h1 {
   font-size: 2rem;
   color: #333;
+  
 }
 
 .todo-item {
-  background-color: #fff;
-  padding: 10px;
-  margin: 10px;
+  background-color: #f0ecec;
+  padding: 20px;
+  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
+
 
 .todo-item input[type="checkbox"] {
   margin-right: 10px;
@@ -113,13 +118,23 @@ body {
 
 .todo-item button {
   padding: 5px 10px;
-  margin: 5px;
+  margin: initial;
   border-radius: 5px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
 }
+
+.todo-item button[disabled]{
+  background-color: #d3d3d3;
+  color: #e28a8a;
+  cursor: not-allowed; 
+  opacity: 0.6;
+  text-decoration:line-through;
+
+}
+
 
 .todo-item button:hover {
   background-color: #45a049;
@@ -148,8 +163,8 @@ body {
   padding: 10px;
   margin: 10px 0;
   width: 80%;
-  max-width: 400px;
-  border-radius: 5px;
+  max-width: 450px;
+  border-radius: 3px;
   border: 1px solid #ccc;
 }
 
